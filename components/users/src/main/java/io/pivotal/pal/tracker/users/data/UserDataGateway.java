@@ -1,6 +1,7 @@
 package io.pivotal.pal.tracker.users.data;
 
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
@@ -44,7 +45,7 @@ public class UserDataGateway {
         return list.get(0);
     }
 
-
     private RowMapper<UserRecord> rowMapper =
         (rs, num) -> new UserRecord(rs.getLong("id"), rs.getString("name"));
+
 }
