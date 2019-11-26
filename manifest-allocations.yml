@@ -3,7 +3,7 @@ applications:
   path: ./applications/allocations-server/build/libs/allocations-server.jar
   routes:
   - route: allocations-pal-tracker-distributed-dumbo-octopus.cfapps.io
-  memory: 1G
+  memory: 499M
   instances: 1
   env:
     REGISTRATION_SERVER_ENDPOINT: registration-pal-tracker-distributed-dumbo-octopus.cfapps.io
